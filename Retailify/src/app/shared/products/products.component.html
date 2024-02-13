@@ -1,0 +1,145 @@
+<div class="product-container" *ngIf="filteredProducts.length === 0">
+    
+  
+    <div class="card" *ngFor = "let product of products">
+        <div class="Imagecontainer">
+            <div class="Image-Wrapper">
+                <div class="Image-Wrapper1">
+                    <img [src]="product.imageUrl" />
+                    
+                </div>
+            </div>
+            
+        </div>
+        <div class="Content">
+            <div class="ItemName">{{ product.name}}</div>
+            <div class="SmallDescription">{{ product.model}}</div>
+            <div class="Action">
+                <div class="Price">{{ '$' + product.price }}</div>
+                <!-- <div class="Button">
+                    <div class="Icon" >
+                        <div class="Vector"></div>
+                    </div>
+                </div> -->
+                <!-- product-list.component.html -->
+    
+    <div *appSeller="'seller'">
+        <button mat-icon-button (click)="onEditClick(product)">
+          <mat-icon >edit</mat-icon>
+        </button>
+        <button mat-icon-button (click) = "onDeleteClick(product)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+      
+      <div *appSeller="'buyer'">
+        <!-- Show these buttons for buyers -->
+        <button mat-icon-button  (click)="oncartClick(product)">
+          <mat-icon>{{ product.inCart ? 'add_shopping_cart' :  'add_shopping_cart' }}</mat-icon>
+        </button>
+        <button mat-icon-button >
+          <mat-icon>favorite</mat-icon>
+        </button>
+      </div>
+      
+      <div *appSeller="'guest'">
+        <!-- Show these buttons for guests -->
+        <button mat-icon-button (click) = "onCartGuestClick()" >
+          <mat-icon>add_shopping_cart</mat-icon>
+        </button>
+        <button mat-icon-button >
+          <mat-icon>favorite</mat-icon>
+        </button>
+      </div>
+      
+            </div>
+        </div>
+        </div>
+    
+        
+        <div class="card" *appSeller="'seller'">
+          <div class="Imagecontainer">
+              <div class="Image-Wrapper">
+                  <div class="Image-Wrapper1">
+                      <img src="https://cdn4.iconfinder.com/data/icons/vectory-bonus-3/40/button_add-512.png" (click) ="openDialog()" />
+                  </div>
+              </div>
+              
+          </div>
+          </div>
+        </div>
+    
+        
+    
+    
+        
+    <div class="product-container" *ngIf="filteredProducts.length > 0">
+        
+      
+      <div class="card" *ngFor = "let product of filteredProducts">
+          <div class="Imagecontainer">
+              <div class="Image-Wrapper">
+                  <div class="Image-Wrapper1">
+                      <img [src]="product.imageUrl" />
+                      
+                  </div>
+              </div>
+              
+          </div>
+          <div class="Content">
+              <div class="ItemName">{{ product.name}}</div>
+              <div class="SmallDescription">{{ product.model}}</div>
+              <div class="Action">
+                  <div class="Price">{{ '$' + product.price }}</div>
+                  <!-- <div class="Button">
+                      <div class="Icon" >
+                          <div class="Vector"></div>
+                      </div>
+                  </div> -->
+                  <!-- product-list.component.html -->
+      
+      <div *appSeller="'seller'">
+          <button mat-icon-button (click)="onEditClick(product)">
+            <mat-icon >edit</mat-icon>
+          </button>
+          <button mat-icon-button (click) = "onDeleteClick(product)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+        
+        <div *appSeller="'buyer'">
+          <!-- Show these buttons for buyers -->
+          <button mat-icon-button  (click)="oncartClick(product)">
+            <mat-icon>{{ product.inCart ? 'add_shopping_cart' :  'add_shopping_cart' }}</mat-icon>
+          </button>
+          <button mat-icon-button >
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </div>
+        
+        <div *appSeller="'guest'">
+          <!-- Show these buttons for guests -->
+          <button mat-icon-button (click) = "onCartGuestClick()" >
+            <mat-icon>add_shopping_cart</mat-icon>
+          </button>
+          <button mat-icon-button >
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </div>
+        
+              </div>
+          </div>
+          </div>
+      
+          
+          <div class="card" *appSeller="'seller'">
+            <div class="Imagecontainer">
+                <div class="Image-Wrapper">
+                    <div class="Image-Wrapper1">
+                        <img src="https://cdn4.iconfinder.com/data/icons/vectory-bonus-3/40/button_add-512.png" (click) ="openDialog()" />
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+          </div>

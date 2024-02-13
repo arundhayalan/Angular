@@ -1,0 +1,130 @@
+mat-progress-spinner{
+    display: flex;
+  }
+  
+    
+  
+  
+  .custom-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      
+    }
+    
+    .icon-buttons {
+      display: flex;
+      justify-content: flex-end; 
+      margin-left: auto;
+      align-items: center;
+      color: black;
+    }
+   
+    .small-count{
+      position: relative;
+      top: -10px; 
+      left: -1.5px; 
+      background-color: rgb(83, 76, 76); 
+      color: white; 
+      border-radius: 90%; 
+      padding: 4px; 
+      font-size: 0.4em; 
+    }
+  
+    .mat-toolbar-row {
+      width: 100%;
+      display: flex;
+      
+    }
+    mat-toolbar{
+      background-color: transparent;
+      position: fixed;
+      z-index: 3;
+    }
+    .spacer {
+      flex-grow: 1; 
+    }
+  
+    .heading{
+      font-size: 20px; font-family: Cabin; font-weight: 500;
+    }
+    
+    .TopBar {
+      position: relative; 
+      z-index: 2; width: 100%;  padding: 10px; margin-top: 10px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 10px; display: inline-flex; position: sticky; 
+    }
+    
+    .Input {
+      height: 43px; padding-left: 155px; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: flex; ; 
+    }
+    
+    .Label {
+      padding-left: 8px;
+      padding-right: 8px;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      display: inline-flex;
+    }
+    
+    .LabelText {
+      color: #60695C;
+      font-size: 16px;
+      font-family: Cabin;
+      font-weight: 400;
+      word-wrap: break-word;
+      align-items: center;
+    }
+    
+    .InputField {
+      align-self: stretch;   padding-top: 8px; padding-bottom: 8px; background: white; box-shadow: 0px 4px 16px rgba(26, 31, 22, 0.15); border-radius: 93px; overflow: hidden; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex;
+    }
+    
+    .InputArea {
+       height: 40px;  justify-content: flex-start; align-items: center; gap: 10px; display: flex
+    }
+    
+    .textarea{
+       height: 100%;  font-size: 20px; font-family: Cabin; font-weight: 500; border: none; outline: none; background: none; color: rgba(26, 31, 22, 0.50); word-wrap: break-word; width: 100%; align-items: center; padding-top: 5px; padding-left: 100px;
+    }
+    
+    .Placeholder {
+      
+      color: rgba(26, 31, 22, 0.50);
+      font-size: 20px;
+      font-family: Cabin;
+      font-weight: 500;
+      word-wrap: break-word;
+    }
+   
+    @media screen and (min-width: 500px) {
+      .mat-toolbar-row {
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+    
+      .mat-icon-button {
+        margin: 10px;
+      }
+    }
+  
+    /* navbar.component.css */
+  
+  
+  
+  
+  
+  
+  mat-sidenav {
+    width: 200px;
+  }
+  mat-icon ,h4 ,mat-button{
+    color: black;
+  }
+  a{
+    color: black;
+  }
+  mat-sidenav-content {
+    flex: 1;
+    padding: px;
+  }

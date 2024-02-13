@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="container-card">
+  <mat-card-content>
+        
+        <div class="example-container">
+              <h2>Registration</h2>
+          <!-- Use the form component -->
+          <app-forms></app-forms>
+          <!-- Your existing form fields go here -->
+      
+          <!-- Submit button -->
+          <br>
+          <div class="login-container">
+            <button mat-button color="primary" (click)="onSubmit()" [disabled]="!registrationForm || registrationForm.invalid">Submit</button>
+          </div><br>
+          <div>
+              <span>Already have an account?</span>
+              <button mat-button color="success" [routerLink]="['/buyers/login']" >Login</button>
+            </div>
+        </div>
+      </mat-card-content>
+    </div>
+      </div>

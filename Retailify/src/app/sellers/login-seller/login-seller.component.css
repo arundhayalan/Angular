@@ -1,0 +1,44 @@
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('https://www.kindpng.com/picc/m/732-7329685_e-commerce-website-background-image-e-commerce-website.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .login-card {
+    width: 500px;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* White background */
+    transition: all 0.3s ease; /* Add transition for smoother animations */
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .form-field {
+    margin-bottom: 24px; /* Increased margin for better spacing */
+  }
+  
+  /* Adjust input width */
+  mat-form-field {
+    width: calc(100% - 24px); /* Adjust width and subtract padding for full width */
+    transition: width 0.3s ease; /* Add transition for smoother animations */
+  }
+  
+  /* Increase button size */
+  .login-button {
+    width: 100%;
+    padding: 12px; /* Adjust padding for better button appearance */
+  }
+  
+  /* Hover effect on the login card */
+  .login-card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }

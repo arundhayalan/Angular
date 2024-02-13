@@ -1,0 +1,49 @@
+/* register.component.css */
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+  }
+  
+  .register-card {
+   
+    padding: 20px; 
+  
+    
+    border: 1px solid #ccc;
+    border-radius: 10px; 
+    
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-group  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px; /* Adjust the margin as needed */
+  }
+  
+  .half-width  {
+    width: 48%; /* Adjust the width of the input fields as needed */
+    margin-bottom: 10px; /* Adjust the margin as needed */
+  }
+  
+  /* Add any other specific styling for your form fields */
+  .mat-form-field  {
+    width: 100%;
+   
+  }
+  
+  .field-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  /* Add styles for the Submit button */
+  mat-button {
+    margin-top: 10px; /* Adjust the margin as needed */
+  }

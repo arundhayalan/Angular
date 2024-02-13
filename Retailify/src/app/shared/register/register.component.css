@@ -1,0 +1,88 @@
+/* Assuming the parent container is mat-card-content */
+
+
+mat-card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     /* Adjust as needed */
+  }
+  
+  
+  /* .container-card{
+ 
+  
+  border: 1px solid #ccc;
+  border-radius: 10px; 
+  
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+} */
+  .container {
+    padding-left: 10%;
+    width: 80%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px; /* Add margin to separate the form from the toolbar */
+   
+  }
+  
+  .example-container {
+    width: 80%; /* Adjust the width as needed */
+    padding: 20px;
+     
+    
+    border-radius: 100px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  /* app-forms {
+    width: 100%;
+    box-sizing: border-box;
+  } */
+  
+  .button-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons */
+    align-items: center; /* Center buttons */
+    margin-top: 20px; /* Add space between the form and buttons */
+  }
+  
+  @media (max-width: 768px) {
+    .example-container {
+      width: 90%; /* Adjust for smaller screens */
+    }
+  
+    /* app-forms {
+      padding: 9px 4px 0px 10px; 
+    } */
+  }
+  /* register.component.css */
+
+
+
+
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 15px; /* Adjust the margin as needed */
+}
+
+.half-width {
+  width: 50%; /* Adjust the width of the input fields as needed */
+  margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+/* Add any other specific styling for your form fields */
+.mat-form-field {
+  width: 100%;
+}
+
+/* Add styles for the Submit button */
+mat-button {
+  margin-top: 10px; /* Adjust the margin as needed */
+}

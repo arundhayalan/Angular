@@ -1,0 +1,96 @@
+<mat-sidenav-container fullscreen>
+  
+    <mat-sidenav #sidenav class="sw-sidenav">
+      <mat-list>
+        <mat-nav-list>
+          <a mat-list-item (click)="switchLanguage('en')">
+            {{ 'header.lang_en' | translate }}
+          </a>
+          <a mat-list-item  (click)="switchLanguage('hn')">
+            {{ 'header.lang_hn' | translate }}
+          </a>
+          <a mat-list-item >
+            <form [formGroup]="categoryForm">
+              <mat-select formControlName="category" placeholder="Categories">
+                <mat-option *ngFor="let category of categories" [value]="category">
+                  {{ category }}
+                </mat-option>
+              </mat-select>
+            </form>
+          </a>
+          <button mat-icon-button *ngIf="isMobile">
+            <mat-icon>home</mat-icon>
+          </button>
+          <button mat-icon-button *ngIf="isMobile && !isLoggedIn()" (click)="redirectToRegisterseller()">
+            <mat-icon>store</mat-icon>
+          </button>
+          <button mat-icon-button *ngIf="isMobile" (click)="redirectToCartPage()" >
+            <mat-icon>shopping_cart</mat-icon>
+          </button>
+          <button mat-icon-button (click)="redirectToLogin()" *ngIf="isMobile && !isLoggedIn()">
+            <mat-icon>person</mat-icon>
+          </button>
+        </mat-nav-list>
+      </mat-list>
+    </mat-sidenav>
+  
+        <mat-toolbar color="primary" #toolbar>
+          <button
+            type="button"
+            mat-icon-button
+            (click)="sidenav.open()"
+            title="Open sidenav">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <h4 *ngIf = "isMobile" class="heading">{{ 'header.ecommerce' | translate }}</h4>
+  
+          
+        
+        <div class="TopBar">
+          <div class="Input">
+              <div class="InputField">
+                  <div class="InputArea">
+                    <form [formGroup] = "searchForm">
+                    <input
+                    type="text"
+                    class="textarea"
+                    placeholder="{{ 'header.ecommerce' | translate }}"
+                    formControlName="searchInput"
+                  />
+                  </form>
+                  </div>
+              </div>
+              
+              
+          </div>
+      </div>
+          
+        
+          
+          <div class="icon-buttons" *ngIf="isDesktop">
+            <button mat-icon-button  (click)="redirectToLoginseller()" *ngIf="!isLoggedIn()">
+              <mat-icon>seller</mat-icon>
+            </button>
+            <button mat-icon-button >
+              <mat-icon>home</mat-icon>
+            </button>
+            <button mat-icon-button  *ngIf="!isLoggedIn()" (click)="redirectToRegisterseller()">
+              <mat-icon>store</mat-icon>
+            </button>
+            <button mat-icon-button   *appSeller="'buyer'" (click)="redirectToCartPage()">
+              <mat-icon>shopping_cart</mat-icon><sup class="small-count">{{ count }}</sup>
+            </button>
+            <button mat-icon-button (click)="redirectToLogin()" *ngIf="!isLoggedIn()">
+              <mat-icon>person</mat-icon>
+            </button>
+            <button mat-icon-button class = "exit-button" *ngIf="isLoggedIn()" (click)="logout()">
+              <mat-icon>exit_to_app</mat-icon>
+            </button>
+          </div>
+        </mat-toolbar>
+      <div class="content" #main>
+       
+        <router-outlet></router-outlet>
+      </div>
+      
+  </mat-sidenav-container>

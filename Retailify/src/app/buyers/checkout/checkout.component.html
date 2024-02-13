@@ -1,0 +1,95 @@
+<div class="container">
+    <div class="title">
+        <h2>Checkout</h2>
+    </div>
+    
+    <div class="d-flex" *ngIf="savedAddresses && savedAddresses.length >= 0"  [formGroup]="checkoutForm">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Saved Addresses</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-radio-group>
+            <mat-radio-button *ngFor="let address of savedAddresses" [value]="address" (change)="onSelectSavedAddress(address)">
+              {{ address.name }} - {{ address.address }}, {{ address.state }}, {{ address.country }}
+            </mat-radio-button>
+            
+          </mat-radio-group>
+          
+        </mat-card-content>
+        
+      </mat-card>
+      <button mat-button (click)="onAddAddress()" *ngIf = "!showSaveAddressCheckbox">Add Address</button>
+      <div class="d-flex">
+    
+    
+        <form [formGroup]="checkoutForm" class="checkout-form" (ngSubmit)="onSubmit()" *ngIf="showSaveAddressCheckbox">
+          <label>
+            <span class="fname">Name <span class="required">*</span></span>
+            <input matInput type = "text" formControlName="name"  />
+            <mat-error *ngIf="checkoutForm.get('name').hasError('required') && checkoutForm.get('name').touched">
+              Name is required.
+            </mat-error>
+          </label>
+          <label>
+            <span> Email Address <span class="required">*</span></span>
+            <input matInput formControlName="email" type="text"> 
+            <mat-error *ngIf="checkoutForm.get('email').hasError('required') && checkoutForm.get('email').touched">
+              Email is required.
+            </mat-error>
+            <mat-error *ngIf="checkoutForm.get('email').hasError('email') && checkoutForm.get('email').touched">
+              Please enter a valid email address.
+            </mat-error>
+          </label>
+          <label>
+            <span>Street Address <span class="required">*</span></span>
+            <input matInput type="text"  formControlName="address" required >
+            <mat-error *ngIf="checkoutForm.get('address').hasError('required') && checkoutForm.get('address').touched">
+              Street Address is required.
+            </mat-error>
+          </label>
+          <label>
+            <span>Country <span class="required">*</span></span>
+            <select formControlName="country" required>
+              <option value="usa">USA</option>
+              <option value="canada">Canada</option>
+              <option value="india">India</option>
+              
+            </select>
+            <mat-error *ngIf="checkoutForm.get('country').hasError('required') && checkoutForm.get('country').touched">
+              Country is required.
+            </mat-error>
+          </label>
+          <label *ngIf="checkoutForm.get('country').value === 'india'">
+            <span>State <span class="required">*</span></span>
+            <select formControlName="state">
+              <option  *ngFor="let state of indiaStates" [value]="state">{{state}}</option>
+            </select>
+            <mat-error *ngIf="checkoutForm.get('state').hasError('required') && checkoutForm.get('state').touched">
+              State is required.
+            </mat-error>
+          </label>
+          <label>
+            <span>Postcode / ZIP <span class="required">*</span></span>
+            <input type="text"  formControlName = "pincode"> 
+            <mat-error *ngIf="checkoutForm.get('pincode').hasError('required') && checkoutForm.get('pincode').touched">
+              Postcode / ZIP is required.
+            </mat-error>
+          </label>
+          <label>
+            <span>Phone <span class="required">*</span></span>
+            <input type="tel" formControlName = "phonenumber"> 
+            <mat-error *ngIf="checkoutForm.get('phonenumber').hasError('required') && checkoutForm.get('phonenumber').touched">
+              Phone is required.
+            </mat-error>
+          </label>
+          
+          <mat-checkbox  *ngIf="showSaveAddressCheckbox" formControlName="addressSave">Save this address</mat-checkbox>
+          <button type="submit" [disabled] = "!checkoutForm.valid">Place Order</button>
+        </form>
+           
+       </div>
+      
+   
+  
+  </div>

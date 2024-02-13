@@ -1,0 +1,162 @@
+<!-- register.component.html -->
+<mat-card-content>
+    <div class="example-container">
+      <mat-horizontal-stepper [linear]="true" #stepper>
+        <!-- Step 1 -->
+        <mat-step>
+          <ng-template matStepLabel>Personal Information</ng-template>
+          <form [formGroup]="registrationForm" class="mat-elevation-z2 register-card">
+            <div class="input-group">
+              <!-- Your existing personal information fields go here -->
+  
+              <mat-form-field  class="half-width">
+                <mat-label>Role</mat-label>
+                <mat-select formControlName="role">
+                  <mat-option value="buyer">Buyer</mat-option>
+                  <mat-option value="seller">Seller</mat-option>
+                </mat-select>
+              </mat-form-field>
+  
+                <mat-form-field class="half-width">
+                  <mat-label>First Name</mat-label>
+                  <input matInput type="text" id="firstName" formControlName="firstName">
+                  <mat-error *ngIf="registrationForm.get('firstName').hasError('pattern')">
+                    First name can only contain alphabets and single quotes.
+                  </mat-error>
+                </mat-form-field>
+          
+                <mat-form-field class="half-width">
+                  <mat-label>Last Name</mat-label>
+                  <input matInput type="text" id="lastName" formControlName="lastName">
+                  <mat-error *ngIf="registrationForm.get('lastName').hasError('pattern')">
+                    Last name can only contain alphabets.
+                  </mat-error>
+                  <mat-error *ngIf="registrationForm.get('lastName').hasError('required')">
+                    Last name is required.
+                  </mat-error>
+                </mat-form-field>
+          
+                <mat-form-field class="half-width">
+                  <mat-label>Gender</mat-label>
+                  <mat-select formControlName="gender" placeholder="Select Gender">
+                    <mat-option value="male">Male</mat-option>
+                    <mat-option value="female">Female</mat-option>
+                    <!-- Add more options as needed -->
+                  </mat-select>
+                  <mat-error *ngIf="registrationForm.get('gender').hasError('required')">
+                    Gender is required.
+                  </mat-error>
+                </mat-form-field>
+  
+                
+          
+                <mat-form-field class="half-width">
+                  <mat-label>Date of Birth</mat-label>
+                  <input matInput [matDatepicker]="dobPicker" formControlName="dob" placeholder="DD/MM/YYYY" (dateInput)="onDateInput($event)">
+                  <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                  <mat-datepicker #dobPicker></mat-datepicker>
+                  <mat-error *ngIf="registrationForm.get('dob').hasError('matDatepickerParse')">
+                    Date of Birth should be in "DD/MM/YYYY" format.
+                  </mat-error>
+                  <mat-error *ngIf="registrationForm.get('dob').hasError('required')">
+                    Date of Birth is required.
+                  </mat-error>
+                  <mat-error *ngIf="registrationForm.get('dob').hasError('invalidAge')">
+                    Age must be 14 years or older.
+                  </mat-error>
+                </mat-form-field>
+                
+              </div>
+              
+  
+              <button mat-button matStepperNext color="primary">Next</button>
+  
+          </form>
+        </mat-step>
+  
+        <!-- Step 2 -->
+        <mat-step>
+          <ng-template matStepLabel>Contact Information</ng-template>
+          <form [formGroup]="registrationForm" class="mat-elevation-z2 register-card">
+  
+            <div class="input-group">
+              <mat-form-field class="half-width">
+                <mat-label>Phone Number</mat-label>
+                <input matInput type="text" id="phoneNumber" formControlName="phoneNumber">
+                <mat-error *ngIf="registrationForm.get('phoneNumber').hasError('pattern')">
+                  Phone number should be numeric with a length of 10.
+                </mat-error>
+                <mat-error *ngIf="registrationForm.get('phoneNumber').hasError('required')">
+                  Phone Number is required.
+                </mat-error>
+              </mat-form-field>
+        
+              
+  
+              <button mat-button matStepperPrevious color="warn">Back</button>
+              <button mat-button matStepperNext color="primary">Next</button>
+            </div>
+  
+          </form>
+        </mat-step>
+  
+        <!-- Step 3 -->
+        <mat-step>
+          <ng-template matStepLabel>Account Information</ng-template>
+          <form [formGroup]="registrationForm" class="mat-elevation-z2 register-card">
+  
+            <div class="input-group">
+              <!-- Your existing account information fields go here -->
+              <mat-form-field class="half-width">
+                <mat-label>Email</mat-label>
+                <input matInput type="text" id="email" formControlName="email">
+                <mat-error *ngIf="registrationForm.get('email').hasError('email')">
+                  Enter a valid email address.
+                </mat-error>
+                <mat-error *ngIf="registrationForm.get('email').hasError('required')">
+                  Email is required.
+                </mat-error>
+              </mat-form-field>
+        
+              <mat-form-field class="half-width">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" id="password" formControlName="password">
+                <mat-error *ngIf="registrationForm.get('password').hasError('required')">
+                  Password is required.
+                </mat-error>
+              </mat-form-field>
+              
+                
+                <!-- Additional fields for the seller -->
+                
+                <div *ngIf="registrationForm.get('role').value === 'seller'" class ="field-container">
+                <mat-form-field class="half-width">
+                  <mat-label>Product Categories</mat-label>
+                  <mat-select formControlName="productcategories">
+                    <!-- Add options for the dropdown as needed -->
+                    <mat-option value="Furniture">Furniture</mat-option>
+                    <mat-option value="Electronics">Electronics</mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="registrationForm.get('productcategories').hasError('required')">
+                    category is required.
+                  </mat-error>
+                </mat-form-field>
+             
+  
+                <mat-form-field class="half-width">
+                  <mat-label>PAN</mat-label>
+                  <input matInput type="text" id="panNumber" formControlName="panNumber">
+                </mat-form-field>
+                </div>
+              
+             
+  
+              <button mat-button matStepperPrevious color="warn">Back</button>
+             
+            </div>
+  
+          </form>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </div>
+  </mat-card-content>

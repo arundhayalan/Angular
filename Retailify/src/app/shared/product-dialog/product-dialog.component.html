@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>{{ data.product ? 'Edit Product' : 'Add Product' }}</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-dialog-content>
+    <mat-form-field>
+      <mat-label>Image URL</mat-label>
+      <input matInput placeholder="Image URL" formControlName="imageUrl" />
+    </mat-form-field>
+    <mat-form-field  >
+      <mat-label>Category</mat-label>
+        <input matInput placeholder="Category" formControlName="category">
+      
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Name" formControlName="name" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Model</mat-label>
+      <input matInput placeholder="Model" formControlName="model" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Price</mat-label>
+      <input matInput placeholder="Price" formControlName="price" type="number" />
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button type="button" (click)="dialogRef.close()">Cancel</button>
+    <button mat-button color="primary" type="submit" [disabled]="form.invalid">Submit</button>
+  </mat-dialog-actions>
+</form>
