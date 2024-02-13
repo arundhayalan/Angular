@@ -1,0 +1,537 @@
+{
+  "header": {
+    "ecommerce": "E-commerce",
+    "home": "Home",
+    "lang_en": "English",
+    "lang_hn": "Hindi"
+  },
+  "buyers": [
+    {
+      "id": "1",
+      "firstName": "Suresh",
+      "lastName": "Ramesh",
+      "phone": "1234567890",
+      "dob": "01-01-1990",
+      "gender": "Male",
+      "email": "john.doe@example.com",
+      "password": "SAMPLE1@password "
+    },
+    {
+      "firstName": "arun",
+      "lastName": "d",
+      "phoneNumber": "9939384937",
+      "dob": "2002-02-12T18:30:00.000Z",
+      "gender": "male",
+      "email": "mad@gmail.com",
+      "password": "@Arunri123",
+      "id": "2"
+    },
+    {
+      "firstName": "mad",
+      "lastName": "d",
+      "phoneNumber": "9898767891",
+      "dob": "2001-07-09",
+      "gender": "male",
+      "email": "mad@gmail.com",
+      "password": "@Arunri123",
+      "id": "3"
+    },
+    {
+      "firstName": "madhavan",
+      "lastName": "arun",
+      "phoneNumber": "9789776893",
+      "dob": "1994-01-31",
+      "gender": "male",
+      "email": "mad1@gmail.com",
+      "password": "@Arunri123",
+      "id": "4"
+    },
+    {
+      "firstName": "arun",
+      "lastName": "dd",
+      "phoneNumber": "3465789381",
+      "dob": "1998-02-02",
+      "gender": "male",
+      "email": "oiu@gmail.com",
+      "password": "@Arunri123",
+      "id": "5"
+    },
+    {
+      "firstName": "kavi",
+      "lastName": "malar",
+      "phoneNumber": "7305003316",
+      "dob": "1997-02-04",
+      "gender": "female",
+      "email": "kavi@gmail.com",
+      "password": "@Arunri123",
+      "id": "6"
+    },
+    {
+      "firstName": "arun",
+      "lastName": "d",
+      "phoneNumber": "9789770389",
+      "dob": "1998-02-02",
+      "gender": "male",
+      "email": "madddy@gmail.com",
+      "password": "1234567",
+      "id": "7"
+    },
+    {
+      "role": "buyer",
+      "firstName": "kavi",
+      "lastName": "malar",
+      "phoneNumber": "9789770389",
+      "dob": "2001-06-19",
+      "gender": "female",
+      "email": "kavimalar1@gmail.com",
+      "password": "@Arunri123",
+      "productcategories": "electronics",
+      "panNumber": "awsed@1234",
+      "id": "8"
+    },
+    {
+      "firstName": "aa",
+      "lastName": "d",
+      "phoneNumber": "9789009890",
+      "dob": "1999-12-08",
+      "gender": "male",
+      "email": "m@gmail.com",
+      "password": "@Arunri123",
+      "role": "buyer",
+      "id": "9"
+    },
+    {
+      "role": "buyer",
+      "firstName": "a",
+      "lastName": "s",
+      "phoneNumber": "9789770389",
+      "dob": "1999-08-12",
+      "gender": "male",
+      "email": "mad1111@gmail.com",
+      "password": "@Arunri123",
+      "productcategories": "",
+      "panNumber": "",
+      "id": "10"
+    },
+    {
+      "role": "buyer",
+      "firstName": "arun",
+      "lastName": "d",
+      "phoneNumber": "9789770689",
+      "dob": "1999-11-10",
+      "gender": "male",
+      "email": "madddyy@gmail.com",
+      "password": "@Arunri123",
+      "id": "11"
+    },
+    {
+      "role": "buyer",
+      "firstName": "Juvitta",
+      "lastName": "J",
+      "phoneNumber": "9789770389",
+      "dob": "2003-02-10",
+      "gender": "male",
+      "email": "juvi@gmail.com",
+      "password": "@Arunri123",
+      "id": "12"
+    }
+  ],
+  "sellers": [
+    {
+      "id": "1",
+      "dob": "1999-11-10",
+      "email": "arund@gmail.com",
+      "firstName": "Arun",
+      "gender": "male",
+      "lastName": "D",
+      "panNumber": "aws123",
+      "password": "@Arunri123",
+      "phoneNumber": "9789770389",
+      "productcategories": "Furniture",
+      "role": "seller"
+    },
+    {
+      "role": "seller",
+      "firstName": "arun",
+      "lastName": "d",
+      "phoneNumber": "8678990878",
+      "dob": "1998-03-04",
+      "gender": "male",
+      "email": "mad@gmail.com",
+      "password": "@Arunri123",
+      "productcategories": "Furniture",
+      "panNumber": "awsd@1234",
+      "id": "2"
+    },
+    {
+      "role": "seller",
+      "firstName": "kavi",
+      "lastName": "malar",
+      "phoneNumber": "9789770389",
+      "dob": "2001-06-19",
+      "gender": "female",
+      "email": "kavimalar@gmail.com",
+      "password": "@Arunri123",
+      "productcategories": "Electronics",
+      "panNumber": "awsed@1234",
+      "id": "3"
+    },
+    {
+      "role": "seller",
+      "firstName": "kavi",
+      "lastName": "malar",
+      "phoneNumber": "9789770389",
+      "dob": "2001-06-19",
+      "gender": "female",
+      "email": "kavimalar1@gmail.com",
+      "password": "@Arunri123",
+      "productcategories": "Electronics",
+      "panNumber": "awsed@1234",
+      "id": "4"
+    },
+    {
+      "role": "seller",
+      "firstName": "aswin",
+      "lastName": "tm",
+      "phoneNumber": "9090989099",
+      "dob": "1999-07-20",
+      "gender": "male",
+      "email": "madst@gmail.com",
+      "password": "awsde123",
+      "productcategories": "Furniture",
+      "panNumber": "asewrwef",
+      "id": "5"
+    },
+    {
+      "role": "seller",
+      "firstName": "mani",
+      "lastName": "d",
+      "phoneNumber": "9789770389",
+      "dob": "1999-11-24",
+      "gender": "male",
+      "email": "aa@gmail.com",
+      "password": "@Arunri123",
+      "productcategories": "Furniture",
+      "panNumber": "awsde@1234",
+      "id": "6"
+    },
+    {
+      "role": "seller",
+      "firstName": "Arun",
+      "lastName": "d",
+      "phoneNumber": "9789770339",
+      "dob": "1999-11-10",
+      "gender": "male",
+      "email": "mail@gmail.com",
+      "password": "@Arun",
+      "productcategories": "Furniture",
+      "panNumber": "11111111",
+      "id": "7"
+    },
+    {
+      "role": "seller",
+      "firstName": "arun",
+      "lastName": "d",
+      "phoneNumber": "9789770389",
+      "dob": "1999-08-13",
+      "gender": "male",
+      "email": "dd@gmail.com",
+      "password": "@Arunr",
+      "productcategories": "Furniture",
+      "panNumber": "awsd#222",
+      "id": "8"
+    },
+    {
+      "role": "seller",
+      "firstName": "raghul",
+      "lastName": "d",
+      "phoneNumber": "9789770389",
+      "dob": "1995-04-06",
+      "gender": "male",
+      "email": "kk@gmail.com",
+      "password": "@Arunri123",
+      "productcategories": "Furniture",
+      "panNumber": "awef@1234",
+      "id": "9"
+    },
+    {
+      "role": "seller",
+      "firstName": "shruthi",
+      "lastName": "A",
+      "phoneNumber": "9789770389",
+      "dob": "1999-10-21",
+      "gender": "female",
+      "email": "shruthi@gmail.com",
+      "password": "@Arunri123",
+      "productcategories": "Furniture",
+      "panNumber": "awsde@2222",
+      "id": "10"
+    },
+    {
+      "role": "seller",
+      "firstName": "raghul",
+      "lastName": "sudharsan",
+      "phoneNumber": "9789770389",
+      "dob": "1995-04-06",
+      "gender": "male",
+      "email": "raghuls@gmail.com",
+      "password": "@Arunri123",
+      "productcategories": "Furniture",
+      "panNumber": "awsed@123",
+      "id": "11"
+    },
+    {
+      "role": "seller",
+      "firstName": "Santhosh",
+      "lastName": "Narayanan",
+      "phoneNumber": "9789770389",
+      "dob": "2002-01-08",
+      "gender": "male",
+      "email": "santhosh@gmail.com",
+      "password": "@Arunri123",
+      "productcategories": "Electronics",
+      "panNumber": "Css12345",
+      "id": "12"
+    }
+  ],
+  "products": [
+    {
+      "imageUrl": "https://i.pinimg.com/originals/89/d5/e1/89d5e1e2d3083b62cd3677fe15a62db5.jpg",
+      "name": "Sofa",
+      "model": "Comfort Plus",
+      "price": 504,
+      "inCart": false,
+      "category": "Furniture",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "imageUrl": "https://tse4.mm.bing.net/th/id/OIP.1HAWacUQKIvxGtd6eqkP6QHaHa?rs=1&pid=ImgDetMain",
+      "name": "Smart TV",
+      "model": "Ultra HD",
+      "price": 799.99,
+      "inCart": false,
+      "category": "Electronics"
+    },
+    {
+      "imageUrl": "https://i.pinimg.com/originals/ca/a6/b0/caa6b0b9b730abedc9267935ddbe62e9.jpg",
+      "name": "Dining Table",
+      "model": "Classic Oak",
+      "price": 400.99,
+      "inCart": false,
+      "category": "Furniture",
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "imageUrl": "https://tse3.mm.bing.net/th/id/OIP.dII9Ar_S-1ZQkP1RudNBBQHaHa?pid=ImgDet&w=192&h=192&c=7&dpr=1.5",
+      "name": "Laptop",
+      "model": "MacBook Pro",
+      "price": 1299.99,
+      "inCart": false,
+      "category": "Electronics"
+    },
+    {
+      "imageUrl": "https://i.pinimg.com/originals/6f/f9/f1/6ff9f17d452aaef93982e28376d89a2a.png",
+      "name": "Bed",
+      "model": "King Size Luxury",
+      "price": 689.99,
+      "inCart": false,
+      "category": "Furniture",
+      "id": "5"
+    },
+    {
+      "id": "6",
+      "imageUrl": "https://i0.wp.com/www.wirelesstvheadphones.net/wp-content/uploads/2019/12/41svnRcBqIL.jpg?fit=500%2C500&ssl=1",
+      "name": "Headphones",
+      "model": "Noise Cancelling Pro",
+      "price": 199.99,
+      "inCart": false,
+      "category": "Electronics"
+    },
+    {
+      "imageUrl": "https://i.pinimg.com/originals/ff/80/e6/ff80e6fe9cefb1c3cee97f5c357b8947.jpg",
+      "name": "Coffee Table",
+      "model": "Modern Glass",
+      "price": 199.99,
+      "inCart": false,
+      "category": "Furniture",
+      "id": "7"
+    },
+    {
+      "id": "8",
+      "imageUrl": "https://tse2.mm.bing.net/th/id/OIP.eqBWWp1ui03GAPRCXq4IKgHaHa?w=500&h=500&rs=1&pid=ImgDetMain",
+      "name": "Smartphone",
+      "model": "Iphone 13",
+      "price": 899.99,
+      "inCart": false,
+      "category": "Electronics"
+    },
+    {
+      "id": "9",
+      "imageUrl": "https://i.pinimg.com/originals/63/f9/3b/63f93b0d42c32ef0fd768173d9439ae0.jpg",
+      "name": "Wardrobe",
+      "model": "Spacious Organizer",
+      "price": 549.99,
+      "inCart": false,
+      "category": "Furniture"
+    },
+    {
+      "id": "10",
+      "imageUrl": "https://th.bing.com/th/id/R.7bdfa8e132f6b119dcc05b17286b505d?rik=M7FrsO7JqWKbuA&riu=http%3a%2f%2fregmedia.co.uk%2f2013%2f11%2f27%2fps4_8.jpg&ehk=v662AkP%2fQ4cmbwHz6bGH0vPtQMec9k86swmnwmEES1c%3d&risl=&pid=ImgRaw&r=0",
+      "name": "Gaming Console",
+      "model": "Playstation 4",
+      "price": 399.99,
+      "inCart": false,
+      "category": "Electronics"
+    }
+  ],
+  "cartItems": [
+    {
+      "name": "Product A",
+      "model": "Model XYZ",
+      "image": "product_a.jpg",
+      "quantity": 10,
+      "price": 29.99,
+      "id": "1"
+    },
+    {
+      "name": "Product A",
+      "model": "Model XYZ",
+      "image": "product_a.jpg",
+      "quantity": 10,
+      "price": 29.99,
+      "id": "2"
+    }
+  ],
+  "buyer-addresses": [
+    {
+      "name": "tmas",
+      "email": "m@gmail.com",
+      "address": "sdljflsdjflsjf",
+      "country": "india",
+      "state": "Madhya Pradesh",
+      "pincode": "898844",
+      "phonenumber": "978907789",
+      "addressSave": true,
+      "id": "1"
+    },
+    {
+      "name": "tm222",
+      "email": "m@gmail.com",
+      "address": "sdljflsdjflsjf",
+      "country": "india",
+      "state": "Madhya Pradesh",
+      "pincode": "898844",
+      "phonenumber": "978907789",
+      "addressSave": false,
+      "buyerId": 9,
+      "id": "2"
+    },
+    {
+      "name": "tm222",
+      "email": "m@gmail.com",
+      "address": "sdljflsdjflsjf",
+      "country": "india",
+      "state": "Madhya Pradesh",
+      "pincode": "898844",
+      "phonenumber": "978907789",
+      "addressSave": false,
+      "id": "3"
+    },
+    {
+      "name": "tm222",
+      "email": "m@gmail.com",
+      "address": "sdljflsdjflsjf",
+      "country": "india",
+      "state": "Madhya Pradesh",
+      "pincode": "898844",
+      "phonenumber": "978907789",
+      "addressSave": false,
+      "buyerId": 9,
+      "id": "4"
+    },
+    {
+      "name": "tm22299",
+      "email": "m@gmail.com",
+      "address": "sdljflsdjflsjf",
+      "country": "india",
+      "state": "Madhya Pradesh",
+      "pincode": "898844",
+      "phonenumber": "978907789",
+      "addressSave": true,
+      "id": "5"
+    },
+    {
+      "name": "tmrrr",
+      "email": "m@gmail.com",
+      "address": "sdljflsdjflsjf",
+      "country": "india",
+      "state": "Madhya Pradesh",
+      "pincode": "898844",
+      "phonenumber": "978907789",
+      "addressSave": true,
+      "id": "6"
+    },
+    {
+      "name": "tmrrrrrr",
+      "email": "m@gmail.com",
+      "address": "sdljflsdjflsjf",
+      "country": "india",
+      "state": "Madhya Pradesh",
+      "pincode": "898844",
+      "phonenumber": "978907789",
+      "addressSave": true,
+      "buyerId": 9,
+      "id": "7"
+    },
+    {
+      "buyerId": 9,
+      "name": "tm2225",
+      "email": "m@gmail.com",
+      "address": "sdljflsdjflsjf",
+      "country": "india",
+      "state": "Madhya Pradesh",
+      "pincode": "898844",
+      "phonenumber": "978907789",
+      "addressSave": true,
+      "id": "8"
+    },
+    {
+      "name": "tmas12",
+      "email": "m@gmail.com",
+      "address": "sdljflsdjflsjf",
+      "country": "india",
+      "state": "Madhya Pradesh",
+      "pincode": "898844",
+      "phonenumber": "978907789",
+      "addressSave": true,
+      "buyerId": 9,
+      "id": "9"
+    },
+    {
+      "buyerId": 9,
+      "name": "tm222",
+      "email": "m@gmail.com",
+      "address": "sdljflsdjflsjf",
+      "country": "india",
+      "state": "Madhya Pradesh",
+      "pincode": "898844",
+      "phonenumber": "978907789",
+      "addressSave": true,
+      "id": "10"
+    },
+    {
+      "name": "juvi22",
+      "email": "juvitha@gmail.com",
+      "address": "355/5.k.dsfsfdsf",
+      "country": "india",
+      "state": "Tamil Nadu",
+      "pincode": "978991",
+      "phonenumber": "9789770389",
+      "addressSave": true,
+      "buyerId": "12",
+      "id": "11"
+    }
+  ]
+}
