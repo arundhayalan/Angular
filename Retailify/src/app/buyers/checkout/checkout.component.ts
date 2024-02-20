@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Observable, Subject, takeUntil } from 'rxjs';
+
 import { AuthService } from '../../services/auth.service';
 import { BuyerService } from '../../services/buyer.service';
 
